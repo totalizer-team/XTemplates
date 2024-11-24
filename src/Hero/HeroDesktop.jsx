@@ -1,114 +1,121 @@
+'use client';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid2';
-import { alpha, useTheme } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import React from 'react';
+import { useTheme } from '@mui/material/styles';
+import * as React from 'react';
 
-const Hero = () => {
+import HomeRectanglesDark from './home-rectangles-dark.svg';
+import HomeRectanglesLight from './home-rectangles-light.svg';
+
+export default function Hero() {
   const theme = useTheme();
-
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   return (
     <Box
-      maxWidth={{ sm: 720, md: 1236 }}
-      width={1}
-      margin={'0 auto'}
-      paddingX={2}
-      paddingY={{ xs: 2, sm: 4, md: 6 }}
+      sx={{
+        overflow: 'hidden',
+        position: 'relative',
+      }}
     >
-      <Grid container spacing={4}>
-        <Grid display="flex" size={{ xs: 12, md: 6 }} alignItems={'center'}>
-          <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-            <Box marginBottom={2}>
-              <Typography
-                variant="h3"
-                color="text.primary"
-                sx={{ fontWeight: 700 }}
-              >
-                Beautiful data representation{' '}
-                <Typography
-                  color={'primary'}
-                  component={'span'}
-                  variant={'inherit'}
-                  sx={{
-                    background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                      theme.palette.secondary.main,
-                      0.3,
-                    )} 0%)`,
-                  }}
-                >
-                  built with theFront
-                </Typography>
-              </Typography>
-            </Box>
-            <Box marginBottom={3}>
-              <Typography variant="h6" component="p" color="text.secondary">
-                World developers use our theFront theme to build their internal
-                tools and client admin applications.
-                <br />
-                Save yourself time and money.
-              </Typography>
-            </Box>
-            <Box
-              display="flex"
-              flexDirection={{ xs: 'column', sm: 'row' }}
-              alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+      <Box
+        sx={{
+          alignItems: 'center',
+          bottom: 0,
+          display: 'flex',
+          justifyContent: 'center',
+          left: 0,
+          position: 'absolute',
+          right: 0,
+          top: 0,
+          zIndex: 1,
+        }}
+      >
+        <Box
+          component="img"
+          src={
+            theme.palette.mode === 'dark'
+              ? HomeRectanglesDark
+              : HomeRectanglesLight
+          }
+          sx={{ height: 'auto', width: '1900px' }}
+        />
+      </Box>
+      <Container
+        maxWidth="md"
+        sx={{ position: 'relative', py: '120px', zIndex: 3 }}
+      >
+        <Stack spacing={4}>
+          <Stack spacing={2}>
+            <Typography
+              sx={{
+                fontSize: 56,
+                fontWeight: 600,
+                lineHeight: 1.2,
+                textAlign: 'center',
+              }}
             >
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                fullWidth={isMd ? false : true}
+              Develop the future, we’ll make it {''}
+              <Typography
+                color="primary.main"
+                component="span"
+                variant="inherit"
               >
-                Start now
-              </Button>
-              <Box
-                component={Button}
-                variant="outlined"
-                color="primary"
-                size="large"
-                marginTop={{ xs: 2, sm: 0 }}
-                marginLeft={{ sm: 2 }}
-                fullWidth={isMd ? false : true}
+                SEAMLESS
+              </Typography>{' '}
+              !
+            </Typography>
+            <Typography sx={{ fontWeight: 400, textAlign: 'center' }}>
+              The{' '}
+              <Typography
+                color="primary.main"
+                component="span"
+                variant="inherit"
               >
-                Learn more
-              </Box>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid
-          display="flex"
-          size={{ xs: 12, md: 6 }}
-          alignItems={'center'}
-          justifyContent={'center'}
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
-        >
-          <Box
-            component={'img'}
-            loading="lazy"
-            height={1}
-            width={1}
-            src={'https://assets.maccarianagency.com/screenshots/dashboard.png'}
-            alt="..."
-            boxShadow={3}
-            borderRadius={2}
-            maxWidth={600}
-            sx={{
-              filter:
-                theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
-            }}
-          />
-        </Grid>
-      </Grid>
+                XComponents
+              </Typography>{' '}
+              is built on top of MUI, an efficient, elegant, and continuously
+              updated front-end component library.
+            </Typography>
+          </Stack>
+          <Stack direction="row" spacing={2} sx={{ justifyContent: 'center' }}>
+            <Button variant="contained" onClick={() => {}}>
+              Guide
+            </Button>
+            <Button onClick={() => {}}>Components</Button>
+          </Stack>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{ alignItems: 'center', justifyContent: 'center ' }}
+          >
+            <AvatarGroup>
+              <Avatar>A</Avatar>
+              <Avatar>B</Avatar>
+              <Avatar>C</Avatar>
+            </AvatarGroup>
+            <Typography
+              color="neutral.300"
+              sx={{ whiteSpace: 'nowrap' }}
+              variant="caption"
+            >
+              <Typography
+                color="inherit"
+                component="span"
+                sx={{ fontWeight: 700 }}
+                variant="inherit"
+              >
+                4.7/5
+              </Typography>{' '}
+              based on (100+ reviews)
+            </Typography>
+          </Stack>
+        </Stack>
+      </Container>
     </Box>
   );
-};
-
-export default Hero;
+}

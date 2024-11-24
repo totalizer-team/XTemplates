@@ -1,5 +1,5 @@
 ---
-sidebar: false
+# sidebar: false
 nav:
   second:
     order: 6

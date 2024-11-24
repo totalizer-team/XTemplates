@@ -3,7 +3,6 @@ import { Reviews } from '@mui/icons-material';
 import './index.css';
 
 export  HeroDesktop from './Hero/HeroDesktop';
-export  HeroMobile from './Hero/HeroMobile';
 
 export AdvantagesSimple from './Advantages/AdvantagesSimple';
 export Advantages01 from './Advantages/Advantages01';
