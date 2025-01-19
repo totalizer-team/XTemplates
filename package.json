@@ -52,8 +52,10 @@
     "@mui/material": "^6.1.5",
     "@mui/x-date-pickers": "^7.22.0",
     "@totalizer/xcomponents": "^0.0.1-beta.2",
+    "@totalizer/xmenu": "^0.0.1-beta.4",
     "react-countup": "^6.5.3",
-    "react-visibility-sensor": "^5.1.1"
+    "react-visibility-sensor": "^5.1.1",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@ant-design/icons-svg": "^4.4.2",
