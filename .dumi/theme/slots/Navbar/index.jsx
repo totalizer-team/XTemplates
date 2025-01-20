@@ -32,6 +32,8 @@ export default ({ data }) => {
   const nav = useNavData();
   const { pathname } = useLocation();
 
+  console.log('===', nav);
+
   const config = nav.map((item) => {
     const icon = ICONS[item.title.toLowerCase()] || <AssignmentIcon />;
     return {

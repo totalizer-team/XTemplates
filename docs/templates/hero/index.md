@@ -18,15 +18,8 @@ The "Hero" module aims to create a strong first impression through the combinati
 
 ## 01
 
-<code src="../../../src/Hero/Hero01.jsx"></code>
+<code src="../../../src/Hero/Hero01.jsx" compact></code>
 
-## HeroDesktop
+## 02
 
-```jsx
-/**
- * compact: true
- */
-import { HeroDesktop } from '@totalizer/xblock';
-
-export default () => <HeroDesktop />;
-```
+<code src="../../../src/Hero/Hero02.jsx" compact></code>
