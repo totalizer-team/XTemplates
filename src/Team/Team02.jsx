@@ -1,179 +1,98 @@
-/* eslint-disable react/no-unescaped-entities */
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+
 import React from 'react';
 
-const mock = [
-  {
-    name: 'Clara Bertoletti',
-    title: 'Junior Designer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
-  },
-  {
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
-  },
-  {
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
-    avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
-  },
-  {
-    name: 'Clara Bertoletti',
-    title: 'Junior Designer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
-  },
-];
-
-const Support = () => {
+const Team = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <Box
-      maxWidth={{ sm: 720, md: 1236 }}
-      width={1}
-      margin={'0 auto'}
-      paddingX={2}
-      paddingY={{ xs: 4, sm: 6, md: 8 }}
+      sx={{
+        backgroundImage: isDark
+          ? "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")"
+          : "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.06)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")",
+        backgroundRepeat: 'repeat',
+      }}
     >
-      <Box marginBottom={2}>
-        <Typography variant={'h4'} sx={{ fontWeight: 700 }} align={'center'}>
-          Our friendly support team will help you with anything
-        </Typography>
-        <Typography
-          variant="h6"
-          component="p"
-          color="text.secondary"
-          align={'center'}
-        >
-          We aim to take care of you. Need help with installation, find a bug,
-          or just need a clarifiction about our documentation?
-          <br />
-          We'll be there to lend a helping hand.
-        </Typography>
-        <Box marginTop={2} display={'flex'} justifyContent={'center'}>
-          <Button
-            color={'primary'}
-            variant={'contained'}
-            size={'large'}
-            startIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                width={20}
-                height={20}
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-            }
-          >
-            Contact us
-          </Button>
-        </Box>
-      </Box>
       <Box
-        marginBottom={4}
+        maxWidth={{ sm: 720, md: 1236 }}
         width={1}
-        display={'flex'}
-        justifyContent={'center'}
+        margin={'0 auto'}
+        paddingX={2}
+        paddingY={{ xs: 4, sm: 6, md: 8 }}
       >
-        <Box
-          paddingBottom={{ xs: 1, md: 0 }}
-          display={'flex'}
-          overflow={'auto'}
-        >
+        <Box marginBottom={4}>
+          <Typography fontWeight={700} variant={'h4'} align={'center'}>
+            Trust the professionals
+          </Typography>
+        </Box>
+        <Grid container spacing={2}>
           {[
-            'All features',
-            'Email support',
-            'Google Ads',
-            'SSO via Google',
-            'API access',
-            'Facebook Ads',
+            {
+              name: 'Chary Smith',
+              title: 'SEO at Comoti',
+              avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
+            },
+            {
+              name: 'Clara Bertoletti',
+              title: 'Junior Designer',
+              avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
+            },
+            {
+              name: 'Jhon Anderson',
+              title: 'Senior Frontend Developer',
+              avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
+            },
+            {
+              name: 'Chary Smith',
+              title: 'SEO at Comoti',
+              avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
+            },
           ].map((item, i) => (
-            <Box
-              key={i}
-              display={'flex'}
-              alignItems={'center'}
-              flexDirection={'column'}
-              flex={'0 0 auto'}
-              marginX={2}
-            >
-              <Box
-                component={ListItem}
-                disableGutters
-                width={'auto'}
-                padding={0}
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={i}>
+              <Card
+                sx={{
+                  boxShadow: 0,
+                  background: 'transparent',
+                  backgroundImage: 'none',
+                }}
               >
                 <Box
-                  component={ListItemAvatar}
-                  minWidth={'auto !important'}
-                  marginRight={2}
+                  component={CardMedia}
+                  borderRadius={2}
+                  width={1}
+                  height={1}
+                  minHeight={320}
+                  image={item.avatar}
+                />
+                <Box
+                  component={CardContent}
+                  bgcolor={'transparent'}
+                  marginTop={-5}
                 >
-                  <Box
-                    component={Avatar}
-                    bgcolor={'secondary.main'}
-                    width={20}
-                    height={20}
-                  >
-                    <svg
-                      width={12}
-                      height={12}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
+                  <Box component={Card}>
+                    <CardContent>
+                      <ListItemText
+                        primary={item.name}
+                        secondary={item.title}
                       />
-                    </svg>
+                    </CardContent>
                   </Box>
                 </Box>
-                <ListItemText primary={item} />
-              </Box>
-            </Box>
+              </Card>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Box>
-      <Grid container spacing={2}>
-        {mock.map((item, i) => (
-          <Grid size={{ xs: 6, md: 3 }} key={i}>
-            <ListItem
-              disableGutters
-              data-aos={'fade-up'}
-              data-aos-delay={i * 100}
-              data-aos-offset={100}
-              data-aos-duration={600}
-              sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                alignItems: { xs: 'flex-start', sm: 'center' },
-              }}
-            >
-              <ListItemAvatar>
-                <Box
-                  component={Avatar}
-                  width={{ xs: 80, sm: 80, md: 120 }}
-                  height={{ xs: 80, sm: 80, md: 120 }}
-                  src={item.avatar}
-                  marginRight={2}
-                />
-              </ListItemAvatar>
-              <ListItemText primary={item.name} secondary={item.title} />
-            </ListItem>
-          </Grid>
-        ))}
-      </Grid>
     </Box>
   );
 };
 
-export default Support;
+export default Team;
