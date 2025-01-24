@@ -1,20 +1,20 @@
 ---
 sidebar: false
-nav:
-  second:
-    order: 6
 ---
 
 # Team
 
-> The "Team" module serves as an introduction to your team or its members. It typically includes the following elements:
->
-> - Team Members: Display each member's name, photo, and job title.
-> - Brief Bio: Highlight key background information, professional expertise, or specific roles.
-> - Social Media Links: Provide easy access to LinkedIn or other platforms, allowing users to explore more about each team member.
-> - Team Values: Share your team’s mission, vision, and core values to convey your culture and guiding principles.
->
-> The purpose of the "Team" module is to highlight the professionalism, diversity, and expertise of your team, building trust and rapport with potential clients or users.
+The "Team" component is designed to showcase the key members of a company or organization, providing users with a personal, human connection to the people behind the business. It highlights team members’ roles, expertise, and unique contributions, building trust and credibility with users. The Team component is commonly featured on about pages, company profiles, or project sections of websites. Key features of the Team component include:
+
+- Team Member Profiles: Each team member is presented with their name, job title, and a brief bio, helping users understand the skills and expertise each individual brings to the company.
+- Profile Photos: Professional headshots or photos of team members are often included to give a personal touch and create a more relatable connection with users.
+- Skills and Expertise: Along with the bio, key areas of expertise, certifications, or notable achievements may be listed to emphasize the value each team member contributes to the organization.
+- Social Links: Some Team components include links to team members' social media profiles (LinkedIn, Twitter, etc.), allowing users to connect and learn more about them professionally.
+- Team Grouping: In larger organizations, team members may be grouped by department or role (e.g., Marketing, Development, Leadership) to make it easier for users to navigate and find specific expertise.
+- Interactive Features: Some components include hover effects or clickable profiles, which provide more information about each team member when users interact with the content.
+- Team Achievements: Some Team components highlight group accomplishments, such as successful projects, awards, or milestones, to showcase the collective strength of the team.
+
+The primary goal of the Team component is to humanize the brand by introducing users to the talented individuals behind the organization, fostering trust and transparency, and helping potential clients, partners, or users feel more connected to the business.
 
 ## Team01
 

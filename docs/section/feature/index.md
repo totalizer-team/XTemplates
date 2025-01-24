@@ -1,21 +1,18 @@
 ---
-# sidebar: false
-nav:
-  second:
-    order: 2
+sidebar: false
 ---
 
-
 # Feature
- "Feature" 的组件通常代表某个产品、服务或解决方案的优势模块。这个模块可能包括以下内容：
 
-* 关键优点：列出产品或服务的主要优势，说明为什么用户应该选择它。
-* 特性描述：对每个优势进行简短的描述，突出其价值。
-* 图标或图片：通过视觉元素增强优势的表达。
-* 对比信息：可能包括与竞争对手的比较，以突出自己的独特性。
-  
-"Feature" 模块的目的是帮助潜在客户快速了解所提供的价值，帮助他们做出购买或选择的决策。
+The "Feature" component is a dedicated section designed to highlight the key functionalities or unique selling points (USPs) of a product, service, or application. It serves as a focal point for presenting important features in a concise, visually appealing format. This component is commonly used on landing pages, product pages, or marketing materials to communicate the value of a product or service. Key features of the Feature component include:
 
+- Highlighting Key Features: Each feature is showcased with a brief description, allowing users to quickly understand the benefits or functionalities offered.
+- Visual Representation: Features are often paired with icons, images, or illustrations to make them more engaging and help users visually connect with the described benefit.
+  Clean Layout: The component usually adopts a well-structured grid or list layout to present features clearly and consistently, making it easy to scan and absorb key information.
+- Interactive Elements: Some Feature components include hover effects, animations, or transitions that make the experience more dynamic and interactive.
+- Customizable Structure: The component can be adapted to fit a range of content types, from simple text and icons to more detailed feature breakdowns with multimedia elements.
+
+The main goal of the Feature component is to effectively showcase a product’s or service’s value by drawing attention to its most important aspects in an engaging, easily digestible manner, helping users understand what sets it apart from competitors.
 
 ## AdvantagesSimple
 
@@ -25,7 +22,7 @@ nav:
  */
 import { AdvantagesSimple } from '@totalizer/xblock';
 
-export default () => <AdvantagesSimple />
+export default () => <AdvantagesSimple />;
 ```
 
 ## Advantages01
@@ -36,7 +33,7 @@ export default () => <AdvantagesSimple />
  */
 import { Advantages01 } from '@totalizer/xblock';
 
-export default () => <Advantages01 />
+export default () => <Advantages01 />;
 ```
 
 ## Advantages02
@@ -47,7 +44,7 @@ export default () => <Advantages01 />
  */
 import { Advantages02 } from '@totalizer/xblock';
 
-export default () => <Advantages02 />
+export default () => <Advantages02 />;
 ```
 
 ## Advantages03
@@ -58,5 +55,5 @@ export default () => <Advantages02 />
  */
 import { Advantages03 } from '@totalizer/xblock';
 
-export default () => <Advantages03 />
+export default () => <Advantages03 />;
 ```
